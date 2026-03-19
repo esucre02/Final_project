@@ -10,7 +10,7 @@ st.set_page_config(page_title="Oráculo Financiero Automático", page_icon="🤖
 # --- CARGAR MODELO Y DICCIONARIO ---
 @st.cache_resource
 def cargar_archivos():
-    with open('models/modelo_financiero_prueba_xgb.pkl', 'rb') as archivo_modelo:
+    with open('models/oraculo_financiero_xgb.pkl', 'rb') as archivo_modelo:
         modelo = pickle.load(archivo_modelo)
     with open('src/diccionario_tickers.json', 'r') as archivo_json:
         diccionario = json.load(archivo_json)
